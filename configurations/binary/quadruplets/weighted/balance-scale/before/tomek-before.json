@@ -1,0 +1,44 @@
+{
+  "name": "WeightedBeforeTomek",
+  "type": "quadruplet",
+  "dataset": {
+    "dataset_name": "balance_scale",
+    "dataset_path": "datasets/clean_data/official_datasets/balance_scale_binary.csv",
+    "majority_classes": [
+      0
+    ],
+    "undersample": "True",
+    "undersample_method": "tomek_links"
+  },
+  "model": {
+    "epochs": 45,
+    "batch_size": 16,
+    "layers_config": [
+      20,
+      256,
+      128,
+      12
+    ]
+  },
+  "model_params": {
+    "start_epoch": 1,
+    "load_params": "False"
+  },
+  "scheduler": {
+    "step_size": 1,
+    "gamma": 0.99
+  },
+  "optimizer": {
+    "learning_rate": 0.007
+  },
+  "classifier": {
+    "k": 5
+  },
+  "clustering": {
+    "k": 3
+  },
+  "epoch_log_interval": 10,
+  "weights_enabled": "True",
+  "checkpoint_path": "./results/binary/quadruplet/weighted/balance_scale/TomekBefore",
+  "save_name": "WeightedBeforeTomek"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Default",
+  "type": "triplet",
+  "dataset": {
+    "dataset_name": "abalone",
+    "dataset_path": "datasets/clean_data/official_datasets/abalone_binary.csv",
+    "majority_classes": [
+      9
+    ],
+    "undersample": "False",
+    "undersample_method": "edited_nearest_neighbour"
+  },
+  "model": {
+    "epochs": 200,
+    "batch_size": 32,
+    "layers_config": [
+      10,
+      256,
+      64,
+      16
+    ]
+  },
+  "model_params": {
+    "start_epoch": 1,
+    "load_params": "False"
+  },
+  "scheduler": {
+    "step_size": 1,
+    "gamma": 0.99
+  },
+  "optimizer": {
+    "learning_rate": 0.003
+  },
+  "classifier": {
+    "k": 5
+  },
+  "clustering": {
+    "k": 3
+  },
+  "epoch_log_interval": 10,
+  "weights_enabled": "False",
+  "checkpoint_path": "./results/binary/triplet/non-weighted/abalone/Default",
+  "save_name": "Default"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "WeightedBeforeRandomSamp",
+  "type": "quadruplet",
+  "dataset": {
+    "dataset_name": "cmc",
+    "dataset_path": "datasets/clean_data/official_datasets/cmc_binary.csv",
+    "majority_classes": [
+      3
+    ],
+    "undersample": "True",
+    "undersample_method": "random_undersampling"
+  },
+  "model": {
+    "epochs": 30,
+    "batch_size": 64,
+    "layers_config": [
+      9,
+      256,
+      128,
+      8
+    ]
+  },
+  "model_params": {
+    "start_epoch": 1,
+    "load_params": "False"
+  },
+  "scheduler": {
+    "step_size": 1,
+    "gamma": 0.99
+  },
+  "optimizer": {
+    "learning_rate": 0.01
+  },
+  "classifier": {
+    "k": 5
+  },
+  "clustering": {
+    "k": 3
+  },
+  "epoch_log_interval": 10,
+  "weights_enabled": "True",
+  "checkpoint_path": "./results/binary/quadruplet/weighted/cmc/RandomSampBefore",
+  "save_name": "WeightedBeforeRandomSamp"
+}

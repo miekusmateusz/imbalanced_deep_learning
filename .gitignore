@@ -1,0 +1,6 @@
+datasets/raw_data
+results
+datasets/clean_data/*
+/remover.sh
+/official_results/
+/datasets/clean_data/

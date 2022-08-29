@@ -1,0 +1,45 @@
+{
+  "name": "NonWeightedAfterTomek",
+  "type": "quadruplet",
+  "dataset": {
+    "dataset_name": "ecoli",
+    "dataset_path": "datasets/clean_data/official_datasets/ecoli_binary.csv",
+    "majority_classes": [
+      4
+    ],
+    "undersample": "False",
+    "undersample_method": "tomek_links"
+  },
+  "model": {
+    "epochs": 130,
+    "batch_size": 16,
+    "layers_config": [
+      7,
+      128,
+      64,
+      8
+    ]
+  },
+  "model_params": {
+    "start_epoch": 1,
+    "load_params": "True",
+    "saved_model_path": "results/binary/quadruplet/non-weighted/ecoli/TomekBefore/model.pth"
+  },
+  "scheduler": {
+    "step_size": 1,
+    "gamma": 0.99
+  },
+  "optimizer": {
+    "learning_rate": 0.01
+  },
+  "classifier": {
+    "k": 5
+  },
+  "clustering": {
+    "k": 3
+  },
+  "epoch_log_interval": 10,
+  "weights_enabled": "False",
+  "checkpoint_path": "./results/binary/quadruplet/non-weighted/ecoli/TomekAfter",
+  "save_name": "NonWeightedAfterTomek"
+}

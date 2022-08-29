@@ -1,0 +1,47 @@
+{
+  "name": "WeightedBeforeTomek",
+  "type": "triplet",
+  "dataset": {
+    "dataset_name": "led7digit",
+    "dataset_path": "datasets/clean_data/official_datasets/led7digit.csv",
+    "majority_classes": [
+      2,
+      1,
+      3,
+      6
+    ],
+    "undersample": "True",
+    "undersample_method": "tomek_links"
+  },
+  "model": {
+    "epochs": 30,
+    "batch_size": 32,
+    "layers_config": [
+      7,
+      64,
+      32,
+      8
+    ]
+  },
+  "model_params": {
+    "start_epoch": 1,
+    "load_params": "False"
+  },
+  "scheduler": {
+    "step_size": 1,
+    "gamma": 0.99
+  },
+  "optimizer": {
+    "learning_rate": 0.01
+  },
+  "classifier": {
+    "k": 5
+  },
+  "clustering": {
+    "k": 3
+  },
+  "epoch_log_interval": 10,
+  "weights_enabled": "True",
+  "checkpoint_path": "./results/triplet/weighted/led7digit/TomekBefore",
+  "save_name": "WeightedBeforeTomek"
+}
